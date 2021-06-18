@@ -73,7 +73,7 @@ if ($_SESSION["usuario"]  === null) {
           <!-- <i class="fas fa-fw fa-cog "></i> -->
           <i class="fas fa-users"></i>
           <span>Administrador</span>
-        </a>
+        </a> 
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <!-- <h6 class="collapse-header">Custom Components:</h6> -->
@@ -81,12 +81,19 @@ if ($_SESSION["usuario"]  === null) {
             <a class="collapse-item" href="listarAdministradores.php">Listar</a>
           </div>
         </div>
-      </li>
-      <li class="nav-item fs-5">
-        <a class="nav-link collapsed" href="notificaciones.php"  >
+      </li> 
+      <li class="nav-item fs-5"   >
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#desplegarNotificacion" aria-expanded="true" aria-controls="desplegarNotificacion" href="" >
           <i class="far fa-bell"></i>
           <span>Notificaciones</span>
         </a>
+        <div id="desplegarNotificacion" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Custom Components:</h6> -->
+            <a class="collapse-item" href="notificaciones.php">Agregar Notificacion</a>
+            <a class="collapse-item" href="listarNotificaciones.php">Ver Notificaciones</a>
+          </div>
+        </div>
       </li>
 
 
