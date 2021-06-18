@@ -4,7 +4,7 @@
     
     <?php
     include_once '../../models/coneccion.php';
-    $consulta = "SELECT id, nombre, pais, ventas FROM personas";
+    $consulta = "SELECT fecha, nombre, pais, ventas FROM personas";
     $data = mysqli_query($conexion, $consulta);
     ?>
     <div class="container d-flex  flex-row-reverse justify-content-end">
@@ -16,7 +16,7 @@
             
         </div>
         <div class="mx-auto " >
-                <h1 > Ventas Totales</h1>
+                <h3> HISTORIAL DE ACTIVIDADES Y EVENTOS</h3>
             </div>
     </div>
     <br>
@@ -27,10 +27,10 @@
                     <table id="tablaPersonas" class="table table-striped table-bordered table-condensed" style="width:100%">
                         <thead class="text-center">
                             <tr>
-                                <th>Id</th>
-                                <th>Nombre</th>
-                                <th>País</th>
-                                <th>ventas</th>
+                                <th>Fecha y hora</th>
+                                <th>Lugar</th>
+                                <th>Descripcion</th>
+                                <th>Observaciones</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -39,7 +39,7 @@
                             foreach ($data as $dat) {
                             ?>
                                 <tr>
-                                    <td><?php echo $dat['id'] ?></td>
+                                    <td><?php echo $dat['fecha'] ?></td>
                                     <td><?php echo $dat['nombre'] ?></td>
                                     <td><?php echo $dat['pais'] ?></td>
                                     <td><?php echo $dat['ventas'] ?></td>
@@ -67,16 +67,20 @@
                 <form id="formPersonas">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="nombre" class="col-form-label">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre">
+                            <label for="nombre" class="col-form-label">Fecha y hora:</label>
+                            <input type="datetime-local" class="form-control" id="fecha-evento">
                         </div>
                         <div class="form-group">
-                            <label for="pais" class="col-form-label">País:</label>
+                            <label for="pais" class="col-form-label">Lugar:</label>
                             <input type="text" class="form-control" id="pais">
                         </div>
                         <div class="form-group">
-                            <label for="ventas" class="col-form-label">ventas:</label>
-                            <input type="number" class="form-control" id="ventas">
+                            <label for="ventas" class="col-form-label">Descripcion del evento:</label>
+                            <input type="text" class="form-control" id="ventas">
+                        </div>
+                        <div class="form-group">
+                            <label for="nota" class="col-form-label">Observaciones:</label>
+                            <input type="text" class="form-control" id="nota">
                         </div>
                     </div>
                     <div class="modal-footer">

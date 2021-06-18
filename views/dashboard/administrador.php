@@ -6,7 +6,7 @@
     <div class="alert alert-success none" role="alert" id="alertNo" style="display :none">
         Se agrego correctamente a  <a href="#" class="alert-link" id="n-usuario"></a>.
     </div>
-    <h1>Agregar Administrador</h1>
+    <h3>Agregar Administrador</h3>
 
     <div class="mx-5">
         <form id="n-administrador" method="POST">
