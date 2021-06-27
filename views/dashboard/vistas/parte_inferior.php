@@ -63,6 +63,8 @@
 <script type="text/javascript" src="../../public/js/notificaciones.js"></script>
 <script type="text/javascript" src="../../public/js/administrador.js"></script>
 <script type="text/javascript" src="../../public/js/listarNotificaciones.js"></script>
+<script type="text/javascript" src="../../public/js/archivos.js"></script>
+
 
     
 

@@ -20,7 +20,7 @@ switch ($opcion) {
         }
         break;
     case '2':
-        $notificaciones = "SELECT * FROM notificaciones";
+        $notificaciones = "SELECT * FROM notificaciones WHERE id_usuario ='$id_usuario'";
         $notificacion = mysqli_query($conexion, $notificaciones);
         $arreglo = array();
         // print_r($arreglo);
@@ -44,7 +44,7 @@ switch ($opcion) {
             $id = (isset($_POST['id'])) ? $_POST['id'] : ''; 
             $consulta = "DELETE FROM notificaciones WHERE id_notificacion='$id' ";	
             $eliminar = mysqli_query($conexion, $consulta);
-            $consulta = "SELECT * FROM notificaciones";
+            $consulta = "SELECT * FROM notificaciones WHERE id_usuario ='$id_usuario'";
             $notificacion = mysqli_query($conexion, $consulta);
             $arreglo = array();
             while($rows = $notificacion->fetch_array()) {

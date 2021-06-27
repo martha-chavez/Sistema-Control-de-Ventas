@@ -96,6 +96,20 @@ if ($_SESSION["usuario"]  === null) {
         </div>
       </li>
 
+      <li class="nav-item fs-5"   >
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#desplegarArchivis" aria-expanded="true" aria-controls="desplegarArchivis" href="" >
+        <i class="fas fa-file-upload"></i>
+          <span>Archivos</span>
+        </a>
+        <div id="desplegarArchivis" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Custom Components:</h6> -->
+            <a class="collapse-item" href="archivos.php">Agregar Archivos</a>
+            <a class="collapse-item" href="listarArchivos.php">Ver Archivos</a>
+          </div>
+        </div>
+      </li>
+
 
 
 
@@ -124,6 +138,23 @@ if ($_SESSION["usuario"]  === null) {
                 <a class="dropdown-item text-center small text-gray-500" href="#"></a>
               </div>
             </li>
+
+
+
+            <li class="nav-item dropdown no-arrow mx-1" >
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-file-upload"></i>
+                <span class="badge badge-danger badge-counter" id="cantidadDoc"></span>
+              </a>
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown" id="not">
+                <h6 class="dropdown-header">
+                Archivos subidos
+                </h6>
+                <a class="dropdown-item text-center small text-gray-500" href="#"></a>
+              </div>
+            </li>
+
+
 
             <div class="topbar-divider d-none d-sm-block"></div>
             <!-- Nav Item - User Information -->

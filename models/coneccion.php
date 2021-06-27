@@ -1,5 +1,5 @@
 <?php
-    $conexion = mysqli_connect("localhost","root","","app");
+    $conexion = mysqli_connect("localhost","root","avatar65","app");
     // if ($conexion) {
     //     echo "conexion exitosa";
     // }
